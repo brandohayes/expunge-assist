@@ -294,9 +294,9 @@ export default function About() {
         </JoinHeadingContainer>
       </JoinContainer>
       <TeamContainer>
-         <Link to="https://www.hackforla.org/projects/expunge-assist">
-           <Heading>Meet the UX Design & Development Team</Heading>
-         </Link> 
+        <Link to="https://www.hackforla.org/projects/expunge-assist">
+          <Heading>Meet the UX Design & Development Team</Heading>
+        </Link>
       </TeamContainer>
       <Footer />
     </PageContainer>
