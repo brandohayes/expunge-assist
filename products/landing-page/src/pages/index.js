@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 
 import "@fontsource/mulish"
@@ -17,7 +17,6 @@ const ComingSoonContainer = styled.div`
 const ContentContainer = styled.div`
   width: 100%;
   height: 80%;
-  border: 2px solid blue;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -56,9 +55,39 @@ const ImageContainer = styled.div`
 const StopwatchImage = styled.img`
   width: 50%;
   height: 300px;
+  margin-bottom: 0;
+`
+
+const FooterContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 35px;
+`
+
+const SubHeading = styled.h2`
+  font-family: "mulish";
+  font-size: 2em;
+`
+
+const ContactText = styled.h3`
+  font-family: "mulish";
+  margin-top: 0;
+  font-size: 1.4em;
+`
+
+const PurpleText = styled.span`
+  color: #9903ff;
+`
+const MailToLink = styled.a`
+  color: #9903ff;
 `
 
 export default function ComingSoon() {
+  useEffect(() => {
+    document.title = "Coming Soon"
+  })
   return (
     <ComingSoonContainer>
       <ContentContainer>
@@ -69,6 +98,25 @@ export default function ComingSoon() {
         <ImageContainer>
           <StopwatchImage src={stopwatch} />
         </ImageContainer>
+        <FooterContainer>
+          <SubHeading>
+            New things are <PurpleText>coming soon</PurpleText>
+          </SubHeading>
+          <ContactText>
+            {" "}
+            In the meantime, please email{" "}
+            <PurpleText>
+              <MailToLink
+                target="_blank"
+                rel="noopener noreferer"
+                href="mailto:info@expungeassist.com"
+              >
+                info@expungeassist.org
+              </MailToLink>
+            </PurpleText>{" "}
+            for more information
+          </ContactText>
+        </FooterContainer>
       </ContentContainer>
     </ComingSoonContainer>
   )
