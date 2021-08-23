@@ -86,6 +86,53 @@ const DemoButton = styled.button`
   margin-left: 50px;
 `
 
+const HowItWorksSection = styled.div`
+  width: 100%;
+  height: 600px;
+  background-color: #fff;
+`
+
+const HowItWorksHeaderContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.6em;
+`
+
+const HowItWorksHeader = styled.h2`
+  font-family: "Mulish";
+`
+
+const StepsThumbnailsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`
+
+const ThumbnailContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const Thumbnail = styled.img`
+  width: 255px;
+  height: 210px;
+  border-radius: 3px;
+`
+
+const StepNumText = styled.p`
+  font-size: 1.2em;
+  font-family: "mulish";
+  font-weight: bold;
+  margin-bottom: 0;
+`
+const StepDirections = styled.p`
+  font-family: "mulish";
+  margin-top: 3px;
+`
+
 const PartnersContainer = styled.div`
   width: 100%;
   min-height: 600px;
@@ -181,21 +228,6 @@ const SubmitButton = styled.button`
   font-size: 0.8em;
 `
 
-const HorizontalPurpleBand = styled.div`
-  width: 100%;
-  background-color: rgba(153, 3, 255, 0.5);
-  height: 34px;
-  margin-top: 240px;
-`
-
-const VerticalYellowBand = styled.div`
-  width: 34px;
-  background-color: rgba(248, 203, 85, 0.66);
-  height: 500px;
-  position: absolute;
-  left: 1000px;
-`
-
 const WhyPartnerFieldContainer = styled.div`
   width: 50%;
 `
@@ -220,22 +252,6 @@ const HeadOverTextContainer = styled.div`
   font-family: "mulish";
   padding-left: 50px;
   font-size: 0.9em;
-`
-
-const HorizontalYellowBand = styled.div`
-  width: 50%;
-  background-color: rgba(248, 203, 85, 0.66);
-  height: 34px;
-  margin-top: 240px;
-`
-
-const VerticalPurpleBand = styled.div`
-  width: 34px;
-  background-color: rgba(153, 3, 255, 0.5);
-  height: 470px;
-  position: absolute;
-  left: 440px;
-  top: 1093px;
 `
 
 const MissionCard = styled.div`
@@ -269,62 +285,6 @@ const MissionDescription = styled.p`
   line-height: 40px;
   margin-left: 50px;
   margin-right: 50px;
-`
-
-const LightPurpleBand = styled.div`
-  width: 100%;
-  background-color: #f9f1ff;
-  height: 300px;
-  position: relative;
-  bottom: -160px;
-  z-index: 2;
-`
-
-const HowItWorksSection = styled.div`
-  width: 100%;
-  height: 600px;
-  background-color: #fff;
-`
-
-const HowItWorksHeaderContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  font-size: 1.6em;
-`
-
-const HowItWorksHeader = styled.h2`
-  font-family: "Mulish";
-`
-
-const StepsThumbnailsContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`
-
-const ThumbnailContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const Thumbnail = styled.img`
-  width: 255px;
-  height: 210px;
-  border-radius: 3px;
-`
-
-const StepNumText = styled.p`
-  font-size: 1.2em;
-  font-family: "mulish";
-  font-weight: bold;
-  margin-bottom: 0;
-`
-const StepDirections = styled.p`
-  font-family: "mulish";
-  margin-top: 3px;
 `
 
 const handleDemoClick = () => {
@@ -366,6 +326,35 @@ export default function Home() {
           <GreetingImage src={laptop} alt="" />
         </GreetingImageContainer>
       </GreetingContainer>
+
+      <HowItWorksSection>
+        <HowItWorksHeaderContainer>
+          <HowItWorksHeader>
+            How <span style={{ color: "#9903ff" }}>Expunge Assist</span> Works
+          </HowItWorksHeader>
+        </HowItWorksHeaderContainer>
+
+        <StepsThumbnailsContainer>
+          <ThumbnailContainer>
+            <Thumbnail src={step1} alt="" />
+            <StepNumText>Step 1 </StepNumText>
+            <StepDirections>
+              Head to <a href="https://expungeassist.org">expungeassist.org</a>
+            </StepDirections>
+          </ThumbnailContainer>
+          <ThumbnailContainer>
+            <Thumbnail src={step2} alt="" />
+            <StepNumText>Step 2</StepNumText>
+            <StepDirections>Fill out the prompts</StepDirections>
+          </ThumbnailContainer>
+          <ThumbnailContainer>
+            <Thumbnail src={step3} alt="" />
+            <StepNumText>Step 3</StepNumText>
+            <StepDirections>Generate a personal statement</StepDirections>
+          </ThumbnailContainer>
+        </StepsThumbnailsContainer>
+      </HowItWorksSection>
+
       <PartnersContainer>
         <PartnersFormSection>
           <PartnerFormContainer>
@@ -393,13 +382,8 @@ export default function Home() {
               </Form>
             </PartnerForm>
           </PartnerFormContainer>
-          <HorizontalPurpleBand />
-          <VerticalYellowBand />
         </PartnersFormSection>
         <WhyPartnersContainer>
-          <VerticalPurpleBand />
-          <HorizontalYellowBand />
-
           <WhyPartnerFieldContainer>
             <WhyPartnerField>
               <PartnerHeaderContainer>
@@ -432,37 +416,9 @@ export default function Home() {
               <b>second chance.</b>
             </MissionDescription>
           </MissionCard>
-          <LightPurpleBand />
         </PartnerMissionContainer>
       </PartnersContainer>
 
-      <HowItWorksSection>
-        <HowItWorksHeaderContainer>
-          <HowItWorksHeader>
-            How <span style={{ color: "#9903ff" }}>Expunge Assist</span> Works
-          </HowItWorksHeader>
-        </HowItWorksHeaderContainer>
-
-        <StepsThumbnailsContainer>
-          <ThumbnailContainer>
-            <Thumbnail src={step1} alt="" />
-            <StepNumText>Step 1 </StepNumText>
-            <StepDirections>
-              Head to <a href="https://expungeassist.org">expungeassist.org</a>
-            </StepDirections>
-          </ThumbnailContainer>
-          <ThumbnailContainer>
-            <Thumbnail src={step2} alt="" />
-            <StepNumText>Step 2</StepNumText>
-            <StepDirections>Fill out the prompts</StepDirections>
-          </ThumbnailContainer>
-          <ThumbnailContainer>
-            <Thumbnail src={step3} alt="" />
-            <StepNumText>Step 3</StepNumText>
-            <StepDirections>Generate a personal statement</StepDirections>
-          </ThumbnailContainer>
-        </StepsThumbnailsContainer>
-      </HowItWorksSection>
       <Footer />
     </AppContainer>
   )
