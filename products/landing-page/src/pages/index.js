@@ -21,31 +21,30 @@ const GreetingContainer = styled.div`
 `
 
 const GreetingTextContainer = styled.div`
-  width: 50%;
+  width: 42%;
   padding-top: 30px;
 `
 
 const GreetingImageContainer = styled.div`
-  width: 50%;
+  width: 58%;
 `
 
 const GreetingHeader = styled.div`
   font-family: "mulish";
-  font-size: 2.2em;
+  font-size: 2.5em;
   padding-left: 40px;
   font-weight: 800;
   line-height: 45px;
-  letter-spacing: 1px;
+  letter-spacing: 1.6px;
   margin-top: 50px;
 `
 const PurpleText = styled.span`
   font-family: "mulish";
-  font-size: 1.5em;
   color: #9903ff;
 `
 
 const BoldHeaderContainer = styled.div`
-  width: 60%;
+  width: 80%;
   padding-left: 50px;
 `
 
@@ -56,14 +55,34 @@ const GreetingImage = styled.img`
 
 const GreetingDescriptionContainer = styled.div`
   padding: 10px 0 40px 40px;
+  width: 72%;
 `
 
 const GreetingDescriptionText = styled.p`
   font-size: 1.2em;
   font-weight: normal;
-  line-height: 40px;
+  line-height: 25px;
   letter-spacing: 0.8px;
   font-family: "mulish";
+  margin-left: 50px;
+`
+
+const DemoText = styled.p`
+  font-family: "mulish";
+  font-size: 1.4em;
+  margin-left: 50px;
+  font-weight: bold;
+`
+
+const DemoButton = styled.button`
+  width: 367px;
+  height: 42px;
+  background-color: #9903ff;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border: none;
   margin-left: 50px;
 `
 
@@ -71,18 +90,6 @@ const PartnersContainer = styled.div`
   width: 100%;
   min-height: 600px;
   background-color: #fff;
-`
-
-const DemoButton = styled.button`
-  width: 144px;
-  height: 42px;
-  background-color: #9903ff;
-  color: #fff;
-  border-radius: 8px;
-  font-size: 16px;
-  letter-spacing: 1px;
-  border: none;
-  margin-left: 50px;
 `
 
 const PartnersFormSection = styled.div`
@@ -336,10 +343,8 @@ export default function Home() {
         <GreetingTextContainer>
           <GreetingHeader>
             <BoldHeaderContainer>
-              <PurpleText>Expunge Assist</PurpleText>
-              &nbsp; accelerates the
-              <PurpleText> Record Clearance </PurpleText>
-              process by helping you generate a personal statement.
+              Our mission is to make <PurpleText>Record Clearance</PurpleText>{" "}
+              accessible to all
             </BoldHeaderContainer>
           </GreetingHeader>
           <GreetingDescriptionContainer>
@@ -348,7 +353,13 @@ export default function Home() {
               people in California with criminal records accomplish record
               clearance, expungement or reduction.
             </GreetingDescriptionText>
-            <DemoButton onClick={() => handleDemoClick()}>View Demo</DemoButton>
+            <DemoText>
+              Please view our development schedule for rollouts and testing
+              dates.
+            </DemoText>
+            <DemoButton onClick={() => handleDemoClick()}>
+              Try the Expunge Assist Mobile &amp; Desktop Demo
+            </DemoButton>
           </GreetingDescriptionContainer>
         </GreetingTextContainer>
         <GreetingImageContainer>
