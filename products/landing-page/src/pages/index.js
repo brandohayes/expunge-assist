@@ -7,10 +7,12 @@ import laptop from "../assets/images/laptop.png"
 import step1 from "../assets/images/step1.png"
 import step2 from "../assets/images/step2.png"
 import step3 from "../assets/images/step3.png"
+import step4 from "../assets/images/step4.png"
 
 const AppContainer = styled.div`
   width: 100%;
   height: 100%;
+  max-width: 1640px;
 `
 
 const GreetingContainer = styled.div`
@@ -131,6 +133,16 @@ const StepNumText = styled.p`
 const StepDirections = styled.p`
   font-family: "mulish";
   margin-top: 3px;
+`
+
+const StatementText = styled(StepDirections)`
+  text-align: center;
+`
+
+const PurpleBand = styled.div`
+  max-width: 100%;
+  height: 415px;
+  background-color: #f9f1ff;
 `
 
 const PartnersContainer = styled.div`
@@ -338,9 +350,7 @@ export default function Home() {
           <ThumbnailContainer>
             <Thumbnail src={step1} alt="" />
             <StepNumText>Step 1 </StepNumText>
-            <StepDirections>
-              Head to <a href="https://expungeassist.org">expungeassist.org</a>
-            </StepDirections>
+            <StepDirections>Download the app</StepDirections>
           </ThumbnailContainer>
           <ThumbnailContainer>
             <Thumbnail src={step2} alt="" />
@@ -350,39 +360,34 @@ export default function Home() {
           <ThumbnailContainer>
             <Thumbnail src={step3} alt="" />
             <StepNumText>Step 3</StepNumText>
-            <StepDirections>Generate a personal statement</StepDirections>
+            <StatementText>
+              Generate a personal <br /> statement in 20 minutes
+            </StatementText>
+          </ThumbnailContainer>
+          <ThumbnailContainer>
+            <Thumbnail src={step4} alt="" />
+            <StepNumText>Step 4</StepNumText>
+            <StepDirections>Celebrate Record Clearance</StepDirections>
           </ThumbnailContainer>
         </StepsThumbnailsContainer>
       </HowItWorksSection>
 
+      <PurpleBand></PurpleBand>
+
+      <MissionCard>
+        <OurMissionTextContainer>
+          <OurMissionText>Our Mission</OurMissionText>
+        </OurMissionTextContainer>
+        <MissionDescription>
+          Partner with us on our mission to help the 200,000+ residents of LA
+          county who are eligible for record clearance and help provide a second
+          chance
+        </MissionDescription>
+      </MissionCard>
+
       <PartnersContainer>
-        <PartnersFormSection>
-          <PartnerFormContainer>
-            <PartnerForm>
-              <HeadingContainer>
-                <PartnerFormHeading>
-                  We're looking for <PurpledLetters>Partners</PurpledLetters> to
-                  help!
-                </PartnerFormHeading>
-              </HeadingContainer>
-              <PartnerFormText>Lorem Ipsum</PartnerFormText>
-              <PartnerFormText>Ipsum Lorem</PartnerFormText>
-              <PartnerTextAction>
-                Sign up for more info about becoming a partner and for project
-                updates.
-              </PartnerTextAction>
-              <Form action="#" method="POST">
-                <Label htmlFor="signup"></Label>
-                <Input
-                  placeholder="yourname@domain.com"
-                  name="signup"
-                  type="email"
-                ></Input>
-                <SubmitButton>Register</SubmitButton>
-              </Form>
-            </PartnerForm>
-          </PartnerFormContainer>
-        </PartnersFormSection>
+        <PartnersFormSection></PartnersFormSection>
+        <PurpleBand></PurpleBand>
         <WhyPartnersContainer>
           <WhyPartnerFieldContainer>
             <WhyPartnerField>
@@ -405,18 +410,7 @@ export default function Home() {
             </WhyPartnerField>
           </WhyPartnerFieldContainer>
         </WhyPartnersContainer>
-        <PartnerMissionContainer>
-          <MissionCard>
-            <OurMissionTextContainer>
-              <OurMissionText>Our Mission</OurMissionText>
-            </OurMissionTextContainer>
-            <MissionDescription>
-              Our mission is to help the 200,000+ residents of LA county who are
-              eligible for record clearance and help provide a{" "}
-              <b>second chance.</b>
-            </MissionDescription>
-          </MissionCard>
-        </PartnerMissionContainer>
+        <PartnerMissionContainer></PartnerMissionContainer>
       </PartnersContainer>
 
       <Footer />
