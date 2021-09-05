@@ -48,47 +48,52 @@ const useStyles = makeStyles(() =>
       justifyContent: 'center',
       marginTop: '50px',
     },
+    stopwatchImage: {
+      width: '50%',
+      height: '300px',
+      marginBottom: '0',
+    },
   })
 );
 
-const ImageContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-`;
+// const ImageContainer = styled.div`
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 50px;
+// `;
 
-const StopwatchImage = styled.img`
-  width: 50%;
-  height: 300px;
-  margin-bottom: 0;
-`;
+// const StopwatchImage = styled.img`
+//   width: 50%;
+//   height: 300px;
+//   margin-bottom: 0;
+// `;
 
-const FooterContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 35px;
-`;
+// const FooterContainer = styled.div`
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   margin-top: 35px;
+// `;
 
-const SubHeading = styled.h2`
-  font-family: 'mulish';
-  font-size: 2em;
-`;
+// const SubHeading = styled.h2`
+//   font-family: 'mulish';
+//   font-size: 2em;
+// `;
 
-const ContactText = styled.h3`
-  font-family: 'mulish';
-  margin-top: 0;
-  font-size: 1.4em;
-`;
+// const ContactText = styled.h3`
+//   font-family: 'mulish';
+//   margin-top: 0;
+//   font-size: 1.4em;
+// `;
 
-const PurpleText = styled.span`
-  color: #9903ff;
-`;
-const MailToLink = styled.a`
-  color: #9903ff;
-`;
+// const PurpleText = styled.span`
+//   color: #9903ff;
+// `;
+// const MailToLink = styled.a`
+//   color: #9903ff;
+// `;
 
 export default function ComingSoon() {
   const classes = useStyles();
@@ -104,9 +109,9 @@ export default function ComingSoon() {
           <h1 className={classes.mainTitle}>Expunge Assist</h1>
         </div>
         <div className={classes.imageContainer}>
-          <StopwatchImage src={stopwatch} />
+          <img className={classes.stopwatchImage} src={stopwatch} />
         </div>
-        <FooterContainer>
+        {/* <FooterContainer>
           <SubHeading>
             New things are <PurpleText>coming soon</PurpleText>
           </SubHeading>
@@ -123,9 +128,8 @@ export default function ComingSoon() {
             </PurpleText>
             for more information
           </ContactText>
-        </FooterContainer>
+        </FooterContainer> */}
       </div>
     </div>
   );
 }
-    

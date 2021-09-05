@@ -17,6 +17,7 @@ import PrivacyPolicy from 'pages/PrivacyPolicy';
 import TermsOfUse from 'pages/TermsOfUse';
 import FAQ from 'pages/FAQ';
 import AboutUs from 'pages/AboutUs';
+import ComingSoon from 'pages/ComingSoon';
 
 import 'styles/App.css';
 
@@ -71,12 +72,7 @@ const App: React.FC = () => {
             </nav>
 
             <Switch>
-              <Route
-                exact
-                path="/"
-                component={PageContainer}
-                history={history}
-              />
+              <Route exact path="/" component={ComingSoon} />
               <Route
                 path="/form/:page?/:substep?"
                 component={PageContainer}
