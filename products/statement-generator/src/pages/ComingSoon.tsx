@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { makeStyles, createStyles } from '@material-ui/core';
 
-import '@fontsource/mulish';
 import logo from '../assets/iconBlack.svg';
 import stopwatch from '../assets/stopwatch.svg';
 
@@ -33,7 +32,6 @@ const useStyles = makeStyles(() =>
     mainLogo: {
       width: '10%',
       height: '60px',
-      marginTop: '40px',
     },
     mainTitle: {
       fontFamily: 'mulish',
@@ -53,47 +51,30 @@ const useStyles = makeStyles(() =>
       height: '300px',
       marginBottom: '0',
     },
+    footerContainer: {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      marginTop: '35px',
+      fontWeight: 'bold',
+      fontSize: '1.5em',
+      color: '#373F41',
+    },
+    subHeading: {
+      fontFamily: 'mulish',
+      fontSize: '2em',
+    },
+    conactText: {
+      fontFamily: 'mulish',
+      marginTop: '0',
+      fontSize: '1.4em',
+    },
+    purpleText: {
+      color: '#9903ff',
+    },
   })
 );
-
-// const ImageContainer = styled.div`
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   margin-top: 50px;
-// `;
-
-// const StopwatchImage = styled.img`
-//   width: 50%;
-//   height: 300px;
-//   margin-bottom: 0;
-// `;
-
-// const FooterContainer = styled.div`
-//   width: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   margin-top: 35px;
-// `;
-
-// const SubHeading = styled.h2`
-//   font-family: 'mulish';
-//   font-size: 2em;
-// `;
-
-// const ContactText = styled.h3`
-//   font-family: 'mulish';
-//   margin-top: 0;
-//   font-size: 1.4em;
-// `;
-
-// const PurpleText = styled.span`
-//   color: #9903ff;
-// `;
-// const MailToLink = styled.a`
-//   color: #9903ff;
-// `;
 
 export default function ComingSoon() {
   const classes = useStyles();
@@ -109,26 +90,27 @@ export default function ComingSoon() {
           <h1 className={classes.mainTitle}>Expunge Assist</h1>
         </div>
         <div className={classes.imageContainer}>
-          <img className={classes.stopwatchImage} src={stopwatch} />
+          <img className={classes.stopwatchImage} src={stopwatch} alt="" />
         </div>
-        {/* <FooterContainer>
-          <SubHeading>
-            New things are <PurpleText>coming soon</PurpleText>
-          </SubHeading>
-          <ContactText>
-            In the meantime, please email
-            <PurpleText>
-              <MailToLink
-                target="_blank"
+        <div className={classes.footerContainer}>
+          <h2 className={classes.subHeading}>
+            New things are{' '}
+            <span className={classes.purpleText}>coming soon</span>
+          </h2>
+          <h2 className={classes.conactText}>
+            In the meantime, please email&nbsp;
+            <span className={classes.purpleText}>
+              <a
+                className={classes.purpleText}
                 rel="noopener noreferer"
                 href="mailto:info@expungeassist.com"
               >
                 info@expungeassist.org
-              </MailToLink>
-            </PurpleText>
-            for more information
-          </ContactText>
-        </FooterContainer> */}
+              </a>
+            </span>
+            &nbsp;for more information
+          </h2>
+        </div>
       </div>
     </div>
   );
